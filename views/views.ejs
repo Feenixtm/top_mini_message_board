@@ -1,0 +1,17 @@
+<% const animals = ["Cat", "Dog", "Lemur"]%>
+
+<html>
+    <head>
+        <title>Test EJS Page</title>
+    </head>
+
+    <body>
+        <h1>Hello EJS!</h1>
+
+        <ul>
+            <% animals.map((animal) => { %>
+                <li><%= animal %>s are cute</li>
+            <% }) %>
+        </ul>
+    </body>
+</html>

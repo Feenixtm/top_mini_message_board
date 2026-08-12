@@ -1,16 +1,20 @@
-import express from "express";
 import cors from "cors";
 import "dotenv/config";
-import router from "./routes/routes.js"
 
+import router from "./routes/routes.js"
+import path from "node:path";
+
+// ------------------------------------
+
+import express from "express";
 const app = express();
+
+app.set("view engine", "ejs");
+
+// ------------------------------------
 
 app.use(cors())
 app.use(express.json());
-
-// app.get("/", (req, res) => {
-//     res.json();
-// })
 
 app.use("/", router);
 
