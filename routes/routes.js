@@ -17,7 +17,7 @@ const messages = [
 
 router.get("/", (req, res) => {
     // res.render({ title: "Mini Messageboard", messages: messages });
-    res.render("views")
+    res.render("views", { messages: messages, testMessage: "Testing..." })
 })
 
 router.get("/new", (req, res) => {
