@@ -2,11 +2,19 @@
     <head>
         <meta charset="UTF-8"> 
         <title>Test EJS Page</title>
+        <link rel="stylesheet" href="./css/style.css">
     </head>
 
     <body>
         <h1>Hello EJS!</h1>
-        <%= testMessage %>
-        
+
+        <% messages.map(message => { %>
+            <div class="message-div">
+                <p><%= message.user %>: <%= message.text %></p>
+                <a href="/messages/<%= message.id %>" class="open-message-link">Open Message</a>
+            </div>    
+        <% }) %>
+            
+        <a href="/new">Create new message</a>
     </body>
 </html>

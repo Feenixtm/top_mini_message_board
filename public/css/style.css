@@ -1,0 +1,36 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+input {
+    max-width: 30rem;
+}
+
+button {
+    max-width: 30.5rem;
+}
+
+.form-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-div {
+    display: flex;
+    gap: 1rem;
+
+    max-width: 30rem;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.open-message-link {
+    height: fit-content;
+}
+
+.error-text {
+    color: red;
+}
